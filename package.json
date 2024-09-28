@@ -1,7 +1,7 @@
 {
 	"name": "sortcss",
-	"displayName": "Sort CSS",
-	"description": "Sort CSS is an extension that orders CSS properties with two sorting options: grouping properties by categories (layout, typography...) or alphabetically by property name.",
+	"displayName": "SortCSS",
+	"description": "SortCSS is an extension that orders CSS properties with two sorting options: grouping properties by categories (layout, typography...) or alphabetically by property name.",
 	"repository": {
 		"type": "GitHub",
 		"url": "https://github.com/kaplego/SortCSS-vscode"
