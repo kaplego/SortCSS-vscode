@@ -8,9 +8,13 @@ SortCSS is an extension that orders CSS properties with three sorting options:
 
 ## Release Notes
 
+### 1.2.0
+
+Added `Sort On Save`
+
 ### 1.0.0
 
-Initial release of SortCSS
+Initial release of SortCSS.
 
 # Credits
 

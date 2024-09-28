@@ -1,20 +1,22 @@
 {
 	"name": "sortcss",
 	"displayName": "SortCSS",
-	"description": "SortCSS is an extension that orders CSS properties with two sorting options: grouping properties by categories (layout, typography...) or alphabetically by property name.",
+	"description": "Sort CSS is an extension that orders CSS properties with two sorting options: grouping properties by categories (layout, typography...) or alphabetically by property name.",
 	"repository": {
 		"type": "GitHub",
 		"url": "https://github.com/kaplego/SortCSS-vscode"
 	},
 	"publisher": "kaplego",
-	"version": "1.0.1",
+	"version": "1.2.0",
 	"engines": {
 		"vscode": "^1.93.0"
 	},
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [],
+	"activationEvents": [
+		"onStartupFinished"
+	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
@@ -33,7 +35,32 @@
 				"title": "SortCSS: Sort Alphabetically",
 				"shortTitle": "Sort CSS by Name"
 			}
-		]
+		],
+		"configuration": {
+			"title": "SortCSS",
+			"properties": {
+				"sortCSS.sortOnSave": {
+					"order": 0,
+					"title": "Sort on save",
+					"description": "Sort CSS files when saving them.",
+					"type": "boolean",
+					"default": false
+				},
+				"sortCSS.sortingMethod": {
+					"order": 1,
+					"title": "Sorting method on save",
+					"description": "Method to use when sorting after saving a CSS file. Only work with Sort on Save enabled.",
+					"markdownDescription": "Method to use when sorting after saving a CSS file. Only work with `Sort on Save` enabled.",
+					"type": "string",
+					"default": "Category",
+					"enum": [
+						"Category",
+						"Category with Comments",
+						"Alphabetical"
+					]
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
